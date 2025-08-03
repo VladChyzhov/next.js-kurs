@@ -7,6 +7,8 @@ import { Suspense } from 'react';
 import { RevenueChartSkeleton } from '@/app/ui/skeletons';
 import { LatestInvoicesSkeleton } from '@/app/ui/skeletons';
 import { CardSkeleton } from '@/app/ui/skeletons';
+import BlueColorsExample from '@/app/ui/test/BlueColorsExample';
+
 
 export default async function Page() {
   
@@ -22,6 +24,7 @@ export default async function Page() {
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
+              
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <Suspense fallback={<CardSkeleton />}>
           <CardWrapper />
@@ -37,6 +40,7 @@ export default async function Page() {
           <LatestInvoices />
         </Suspense>
       </div>
+      <BlueColorsExample />
     </main>
   );
 }
